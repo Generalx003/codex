@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarePoint Hospitals</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Trusted care, personalized treatment</p>
+      <h1>Specialized care from head to toe</h1>
+      <p class="lede">Choose a body area to explore our specialists and book the right doctor in seconds.</p>
+      <div class="controls">
+        <label class="toggle">
+          <input type="radio" name="gender" value="male" checked>
+          <span>Male</span>
+        </label>
+        <label class="toggle">
+          <input type="radio" name="gender" value="female">
+          <span>Female</span>
+        </label>
+        <button class="cta">Find a specialist</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <noscript>
+      <div class="noscript">
+        <p>This page is interactive. Please enable JavaScript to explore doctors by body area.</p>
+      </div>
+    </noscript>
+
+    <section class="explorer">
+      <div class="loading" id="loadingMessage" aria-live="polite">
+        Loading the interactive explorer...
+      </div>
+
+      <div class="body-map">
+        <div class="silhouette" aria-hidden="true"></div>
+        <div class="hitbox" data-area="head" style="top: 30px; left: 90px; width: 80px; height: 90px;"></div>
+        <div class="hitbox" data-area="chest" style="top: 120px; left: 76px; width: 110px; height: 100px;"></div>
+        <div class="hitbox" data-area="abdomen" style="top: 220px; left: 76px; width: 110px; height: 110px;"></div>
+        <div class="hitbox" data-area="pelvis" style="top: 330px; left: 76px; width: 110px; height: 70px;"></div>
+        <div class="hitbox" data-area="arms" style="top: 140px; left: 16px; width: 60px; height: 150px;"></div>
+        <div class="hitbox" data-area="arms" style="top: 140px; right: 16px; width: 60px; height: 150px;"></div>
+        <div class="hitbox" data-area="legs" style="top: 400px; left: 70px; width: 60px; height: 160px;"></div>
+        <div class="hitbox" data-area="legs" style="top: 400px; right: 70px; width: 60px; height: 160px;"></div>
+      </div>
+
+      <div class="departments" aria-live="polite">
+        <h2>Departments</h2>
+        <div class="chip-grid" id="departmentChips"></div>
+      </div>
+
+      <div class="doctors" aria-live="polite">
+        <div class="doctors__header">
+          <h2>Recommended doctors</h2>
+          <p class="count" id="doctorCount">0 doctors available</p>
+        </div>
+        <div class="doctor-list" id="doctorList"></div>
+      </div>
+    </section>
+
+    <section class="packages">
+      <h2>Health Screening Packages</h2>
+      <div class="package-grid">
+        <article class="package">
+          <h3>Executive Checkup</h3>
+          <p>Comprehensive bloodwork, cardiac screening, and lifestyle counseling in a single visit.</p>
+          <div class="package__footer">
+            <span class="price">$299</span>
+            <button class="ghost">View Details</button>
+          </div>
+        </article>
+        <article class="package">
+          <h3>Women's Wellness</h3>
+          <p>Hormone profile, thyroid panel, and gynecologic consultation tailored for women.</p>
+          <div class="package__footer">
+            <span class="price">$249</span>
+            <button class="ghost">View Details</button>
+          </div>
+        </article>
+        <article class="package">
+          <h3>Active Lifestyle</h3>
+          <p>Musculoskeletal assessment, vitamin levels, and nutrition guidance for athletes.</p>
+          <div class="package__footer">
+            <span class="price">$189</span>
+            <button class="ghost">View Details</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 CarePoint Hospitals. Compassionate care, modern medicine.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

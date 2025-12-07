@@ -104,6 +104,7 @@ let doctorList;
 let doctorCount;
 let departmentChips;
 let hitboxes;
+let loadingMessage;
 
 let activeArea = 'abdomen';
 let activeDepartment = 'gastroenterology';
@@ -193,9 +194,14 @@ function init() {
   doctorCount = document.getElementById('doctorCount');
   departmentChips = document.getElementById('departmentChips');
   hitboxes = Array.from(document.querySelectorAll('.hitbox'));
+  loadingMessage = document.getElementById('loadingMessage');
 
   if (!doctorList || !doctorCount || !departmentChips || hitboxes.length === 0) {
     return;
+  }
+
+  if (loadingMessage) {
+    loadingMessage.remove();
   }
 
   buildChips();

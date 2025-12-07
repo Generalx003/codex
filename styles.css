@@ -49,6 +49,17 @@ p {
   box-shadow: var(--shadow);
 }
 
+.loading {
+  background: #fff8ec;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #6e6047;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
 .hero__content {
   max-width: 880px;
 }
